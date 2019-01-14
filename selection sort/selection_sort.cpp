@@ -3,9 +3,9 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void selection_sort(int arreglo[], int limite); // funci髇 que realiza selection sort
-void ordenar(int & num1, int & num2); // funci髇 que intercambia de lugar 
-void print_array(int arreglo[], int max); // funci髇 para imprimir arreglo
+void selection_sort(int arreglo[], int limite); // funci贸n que realiza selection sort
+void ordenar(int & num1, int & num2); // funci贸n que intercambia de lugar 
+void print_array(int arreglo[], int max); // funci贸n para imprimir arreglo
 
 int main() {
 	int nums[10]{ 28, 11, 2, 59, 39, 47, 0, 7, 40, 29 };
@@ -19,7 +19,7 @@ int main() {
 
 void selection_sort(int arreglo[], int limite)
 {
-	int menor = 0; // variable utilizada para albergar el valor de i en cada iteraci髇 del primer ciclo y usarla para comparaciones sin afectar el arreglo original
+	int menor = 0; // variable utilizada para albergar el valor de i en cada iteraci贸n del primer ciclo y usarla para comparaciones sin afectar el arreglo original
 	for (int i = 0; i < limite - 1; i++) { 
 	    menor = i;
 		for (int j = i+1; j < limite; j++) {
