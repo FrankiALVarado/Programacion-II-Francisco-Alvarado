@@ -3,9 +3,9 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void bubblesort_array(int arreglo[], int limite); // función que realiza bubble sort
-void ordenar(int & num1, int & num2); // función que cambia de lugar dos enteros
-void print_array(int arreglo[], int max); // función que imprime un arreglo
+void bubblesort_array(int arreglo[], int limite); // funciÃ³n que realiza bubble sort
+void ordenar(int & num1, int & num2); // funciÃ³n que cambia de lugar dos enteros
+void print_array(int arreglo[], int max); // funciÃ³n que imprime un arreglo
 
 int main() {
 	
@@ -25,7 +25,7 @@ void bubblesort_array(int arreglo[], int limite)
 	{
 		for (int j = 0; j <= (limite - 2); j++)
 		{
-			if (arreglo[j] > arreglo[j + 1]) { // tiene que checar los adyacentes hasta el último elemento del vector
+			if (arreglo[j] > arreglo[j + 1]) { // tiene que checar los adyacentes hasta el Ãºltimo elemento del vector
 				cout << j + 1 << " iteracion: " << endl;
 				ordenar(arreglo[j], arreglo[j + 1]);
 				print_array(arreglo, limite);
