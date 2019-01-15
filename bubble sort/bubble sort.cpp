@@ -3,36 +3,41 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void bubblesort_array(int arreglo[], int limite); // funciÃ³n que realiza bubble sort
-void ordenar(int & num1, int & num2); // funciÃ³n que cambia de lugar dos enteros
-void print_array(int arreglo[], int max); // funciÃ³n que imprime un arreglo
+void bubblesort_array(int arreglo[], const int & limite); // función que realiza bubble sort
+void ordenar(int & num1, int & num2); // función que cambia de lugar dos enteros
+void print_array(int arreglo[],  const int & max); // función que imprime un arreglo
 
 int main() {
 	
-	int nums[10]{ 28, 11, 2, 59, 39, 47, 0, 7, 40, 29 };
+	int nums[5]{ 5, 4, 3, 2, 1};
 	cout << "arreglo original: " << endl;
-	print_array(nums, 10);
-	bubblesort_array(nums, 10);
+	print_array(nums, 5);
+	bubblesort_array(nums, 5);
 	cout << "arreglo ordenado: " << endl;
-	print_array(nums, 10);
+	print_array(nums, 5);
 	cin.get();
 	return 0;
 }
 
-void bubblesort_array(int arreglo[], int limite)
-{
-	for (int i = 0; i < limite; i++)
+void bubblesort_array(int arreglo[], const int & limite)
+{// agregar una bandera para checar que ya esté ordenado - 
+	int count = 0; // booleano que es verdadero a no ser que haya un cambio en el segundo ciclo
+	for (int i = 0; i < (limite - 1); i++) // le baje una iteracion a este ciclo, antes solo era hasta menor que limite
 	{
+		bool ordenado = true;
 		for (int j = 0; j <= (limite - 2); j++)
 		{
-			if (arreglo[j] > arreglo[j + 1]) { // tiene que checar los adyacentes hasta el Ãºltimo elemento del vector
-				cout << j + 1 << " iteracion: " << endl;
+			count++;
+			if (arreglo[j] > arreglo[j + 1]) { // tiene que checar los adyacentes hasta el último elemento del vector
 				ordenar(arreglo[j], arreglo[j + 1]);
 				print_array(arreglo, limite);
-
+				ordenado = false;
 			}
 		}
+		if (ordenado)
+			break;
 	}
+	cout << count << " iteracion real: " << endl;
 }
 
 void ordenar(int & num1, int & num2)
@@ -42,7 +47,7 @@ void ordenar(int & num1, int & num2)
 	num2 = aux;
 }
 
-void print_array(int arreglo[], int max)
+void print_array(int arreglo[], const int & max)
 {
 	for (int i = 0; i < max; i++)
 	{
