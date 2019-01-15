@@ -34,7 +34,7 @@ void bubblesort_array(int arreglo[], const int & limite)
 				ordenado = false;
 			}
 		}
-		if (ordenado)
+		if (ordenado) // esto solo será verdadero cuando en toda una iteración no se efectuen cambios
 			break;
 	}
 	cout << count << " iteracion real: " << endl;
