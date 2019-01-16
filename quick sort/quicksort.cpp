@@ -6,13 +6,14 @@ using std::cin;
 
 void quick_sort(int arreglo[], int  min_index, int max_index);
 int sublistas(int arreglo[],  const int & min_index, const int & max_index); // int para que devuelva un pivote nuevo cada vez que se llame
-void ordenar(int & num1, int & num2); // funciÃ³n que cambia de lugar dos enteros
+void ordenar(int & num1, int & num2); // función que cambia de lugar dos enteros
 void print_array(int arreglo[], const int & max);
 
-int count = 0, swaps = 1; // variable para contadores y la otra para manejar si hubo cambios en una iteracion;
+int count = 0; // contador global
+
 int main() {
 	int max_index = 0;
-	int arreglo [] {1, 2, 3, 4,5};
+	int arreglo [] {3, 5, 1, 2, 4};
     max_index = (sizeof(arreglo) / sizeof(arreglo[0])) -1;
 
 	cout << "arreglo original: " << endl;
@@ -31,23 +32,19 @@ int main() {
 void quick_sort(int arreglo[], int min_index,  int max_index)
 {
 	
-	if (min_index < max_index && ::swaps > 0) {
+	if (min_index < max_index) {
 		int pivot = sublistas(arreglo, min_index, max_index);
 		quick_sort(arreglo, min_index, pivot - 1);
 		quick_sort(arreglo, pivot + 1, max_index);
 	}
-
 }
 
 int sublistas(int arreglo[], const int & min_index, const int & max_index)
 {
-	int pivot = max_index; //en este caso el pivote siempre serÃ¡ el Ãºltimo indice
-	::swaps = 0;
-	for (int i = max_index - 1; i >= min_index; i--) { // ciclo siempre va a checar a la izquierda del pivote
+	int pivot = max_index; //en este caso el pivote siempre será el último indice
+	for (int i = (pivot - 1); i >= min_index; i--) { // ciclo siempre va a checar a la izquierda del pivote
 		if (arreglo[i] > arreglo[pivot]) {
 			ordenar(arreglo[i], arreglo[pivot]);
-			pivot--; // resta para mantener ubicado correctamente la posicion del pivote
-			::swaps++;
 		}
 		count++;
 	}
