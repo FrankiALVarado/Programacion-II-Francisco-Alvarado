@@ -6,7 +6,7 @@ using std::cin;
 
 void quick_sort(int arreglo[], int  min_index, int max_index);
 int sublistas(int arreglo[],  const int & min_index, const int & max_index); // int para que devuelva un pivote nuevo cada vez que se llame
-void ordenar(int & num1, int & num2); // función que cambia de lugar dos enteros
+void ordenar(int & num1, int & num2); // funciÃ³n que cambia de lugar dos enteros
 void print_array(int arreglo[], const int & max);
 
 int count = 0, swaps = 1; // variable para contadores y la otra para manejar si hubo cambios en una iteracion;
@@ -41,7 +41,7 @@ void quick_sort(int arreglo[], int min_index,  int max_index)
 
 int sublistas(int arreglo[], const int & min_index, const int & max_index)
 {
-	int pivot = max_index; //en este caso el pivote siempre será el último indice
+	int pivot = max_index; //en este caso el pivote siempre serÃ¡ el Ãºltimo indice
 	::swaps = 0;
 	for (int i = max_index - 1; i >= min_index; i--) { // ciclo siempre va a checar a la izquierda del pivote
 		if (arreglo[i] > arreglo[pivot]) {
