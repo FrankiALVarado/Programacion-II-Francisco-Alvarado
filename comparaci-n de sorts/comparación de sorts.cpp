@@ -12,7 +12,7 @@ void selection_sort(int arreglo[], const int & limite);
 void bubblesort_array(int arreglo[], const int & limite);
 int sublistas(int arreglo[], const int & min_index, const int & max_index);
 void quick_sort(int arreglo[], int  min_index, int  max_index);
-double timelapse(unsigned t1, unsigned t2); // funciÛn que regresa la variaciÛn de los clock ticks en segundos
+double timelapse(unsigned t1, unsigned t2); // funci√≥n que regresa la variaci√≥n de los clock ticks en segundos
 
 int count = 0, swaps = 0;
 
@@ -60,7 +60,7 @@ int main() {
 
 int sublistas(int arreglo[], const int & min_index, const int & max_index)
 {
-	int pivot = max_index; //en este caso el pivote siempre ser· el ˙ltimo indice
+	int pivot = max_index; //en este caso el pivote siempre ser√° el √∫ltimo indice
 	for (int i = (pivot - 1); i >= min_index; i--) { // ciclo siempre va a checar a la izquierda del pivote
 		::count++;
 		if (arreglo[i] > arreglo[pivot]) {
@@ -103,8 +103,8 @@ void print_array(int arreglo[], const int & max)
 }
 
 void selection_sort(int arreglo[], const int & limite)
-{//agregar una bandera para checar que ya estÈ ordenado , iteraciones de mas
-	int menor = 0, count = 0, swaps = 0; // variable utilizada para albergar el valor de i en cada iteraciÛn del primer ciclo y usarla para comparaciones sin afectar el arreglo original
+{//agregar una bandera para checar que ya est√© ordenado , iteraciones de mas
+	int menor = 0, count = 0, swaps = 0; // variable utilizada para albergar el valor de i en cada iteraci√≥n del primer ciclo y usarla para comparaciones sin afectar el arreglo original
 	bool penultimo = false;
 	for (int i = 0; i < limite - 1; i++) {
 		menor = i;
@@ -115,7 +115,7 @@ void selection_sort(int arreglo[], const int & limite)
 				menor = j;
 				
 			}
-			if (i == (limite - 2) && arreglo[menor] > arreglo[j]) // esto es una condicional que mientras i estÈ en su penultima iteracion y no vaya a hacer un cambio, de positivo a un bool para cerrar el ciclo.
+			if (i == (limite - 2) && arreglo[menor] > arreglo[j]) // esto es una condicional que mientras i est√© en su penultima iteracion y no vaya a hacer un cambio, de positivo a un bool para cerrar el ciclo.
 				penultimo = true;
 		}
 		if (penultimo)
@@ -128,7 +128,7 @@ void selection_sort(int arreglo[], const int & limite)
 }
 
 void bubblesort_array(int arreglo[], const int & limite)
-{// agregar una bandera para checar que ya estÈ ordenado - 
+{// agregar una bandera para checar que ya est√© ordenado - 
 	int count = 0, swaps = 0; // booleano que es verdadero a no ser que haya un cambio en el segundo ciclo
 	for (int i = 0; i < (limite - 1); i++) // le baje una iteracion a este ciclo, antes solo era hasta menor que limite
 	{
@@ -136,13 +136,13 @@ void bubblesort_array(int arreglo[], const int & limite)
 		for (int j = 0; j <= (limite - 2); j++)
 		{
 			count++;
-			if (arreglo[j] > arreglo[j + 1]) { // tiene que checar los adyacentes hasta el ˙ltimo elemento del vector
+			if (arreglo[j] > arreglo[j + 1]) { // tiene que checar los adyacentes hasta el √∫ltimo elemento del vector
 				ordenar(arreglo[j], arreglo[j + 1]);
 				ordenado = false;
 				swaps++;
 			}
 		}
-		if (ordenado) // esto solo ser· verdadero cuando en toda una iteraciÛn no se efectuen cambios
+		if (ordenado) // esto solo ser√° verdadero cuando en toda una iteraci√≥n no se efectuen cambios
 			break;
 	}
 	cout << count << " iteraciones bubblesort " << endl;
