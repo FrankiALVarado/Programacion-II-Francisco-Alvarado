@@ -4,16 +4,16 @@ using std::cout;
 using std::endl;
 using std::cin;
 
-void quick_sort(int arreglo[], int  min_index, int max_index);
-int sublistas(int arreglo[],  const int & min_index, const int & max_index); // int para que devuelva un pivote nuevo cada vez que se llame
+void quick_sort(int arreglo[], int  min_index, int  max_index);
+int sublistas(int arreglo[],   int & min_index, int & max_index); // int para que devuelva un pivote nuevo cada vez que se llame
 void ordenar(int & num1, int & num2); // función que cambia de lugar dos enteros
 void print_array(int arreglo[], const int & max);
 
 int count = 0; // contador global
-
+//hacer una comparacion programa con el mismo arreglo y comparar tiempos con bubble selection y quick sort
 int main() {
 	int max_index = 0;
-	int arreglo [] {3, 5, 1, 2, 4};
+	int arreglo [] {5,4,3,2,1,10,9,8,7,6};
     max_index = (sizeof(arreglo) / sizeof(arreglo[0])) -1;
 
 	cout << "arreglo original: " << endl;
@@ -29,7 +29,7 @@ int main() {
 	return 0;
 }
 
-void quick_sort(int arreglo[], int min_index,  int max_index)
+void quick_sort(int arreglo[], int min_index,  int  max_index)
 {
 	
 	if (min_index < max_index) {
@@ -39,17 +39,17 @@ void quick_sort(int arreglo[], int min_index,  int max_index)
 	}
 }
 
-int sublistas(int arreglo[], const int & min_index, const int & max_index)
+int sublistas(int arreglo[],  int & min_index,  int & max_index)
 {
-	int pivot = max_index; //en este caso el pivote siempre será el último indice
-	for (int i = (pivot - 1); i >= min_index; i--) { // ciclo siempre va a checar a la izquierda del pivote
-		if (arreglo[i] > arreglo[pivot]) {
-			ordenar(arreglo[i], arreglo[pivot]);
+	int index = min_index;
+	for (int i = min_index; i <= max_index; i++) {
+		if (arreglo[i] < arreglo[max_index]) {
+			index++;
 		}
-		count++;
 	}
-	return pivot;
-	
+	ordenar(arreglo[index], arreglo[max_index]);
+	print_array(arreglo, max_index);
+	return(index);
 }
 
 void ordenar(int & num1, int & num2)
