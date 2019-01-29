@@ -6,7 +6,7 @@ using std::endl;
 
 class cHuman_being;
 class cPersona;
-class cDueño;
+class cDueÃ±o;
 class cDog;
 
 class cHuman_being // interfaz
@@ -44,7 +44,7 @@ public:
 };
 
 
-class cDueño
+class cDueÃ±o
 {
 public:
 	void nameDog(cDog &d, const char *name);
@@ -53,7 +53,7 @@ public:
 
 class cDog : public cAnimal
 {
-	friend class cDueño;
+	friend class cDueÃ±o;
 protected:
 	const char *m_name;
 
@@ -88,16 +88,16 @@ int main() {
 
 	//------------------------------------------------------------------
 	cDog perro2;
-	cDueño Mike;
+	cDueÃ±o Mike;
 
-	Mike.nameDog(perro2, "Miguelito"); // dueño mike nombra a perro 2 como Miguelito
+	Mike.nameDog(perro2, "Miguelito"); // dueÃ±o mike nombra a perro 2 como Miguelito
 	perro2.Get_name();
 
 	cin.get();
 	return 0;
 }
 
-void cDueño::nameDog(cDog & d,const char *name)
+void cDueÃ±o::nameDog(cDog & d,const char *name)
 {
 	d.m_name = name; 
 }
