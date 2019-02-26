@@ -23,6 +23,9 @@ int main() {
 
 int sum_seq(int & start, int & end, int & step)
 {
+	if (start > end)
+		return 0;
+
 	int rep = (end - start) / step;
 	return start * (rep + 1) + step * (rep *rep + rep) / 2;
 }
