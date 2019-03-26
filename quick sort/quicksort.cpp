@@ -15,7 +15,7 @@ int main() {
 	int max_index = 0;
 	int arreglo [] {5,4,3,2,1,10,9,8,7,6};
     max_index = (sizeof(arreglo) / sizeof(arreglo[0])) -1;
-
+    cout << max_index << endl;
 	cout << "arreglo original: " << endl;
 	print_array(arreglo, max_index);
 

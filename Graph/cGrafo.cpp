@@ -3,7 +3,7 @@
 /*
 Labores por terminar:
 nodo primero mejor
-arista agarra peso
+arista agarra peso - listo
 menu ciclico y informar al usuario que primero cargue un vector o que lo va a sobreescribir - listo
 
 */
@@ -228,6 +228,14 @@ std::cout << "3) busqueda en amplitud" << std::endl;
 std::string eleccion;
 std::cin >> eleccion;
 if (eleccion == "1") {
+	if (m_nodos.size() > 0) {
+		std::cout << "ya existe un archivo cargado, desea sobreescribirlo? s/n" << std::endl;
+		std::string eleccion;
+	std:cin >> eleccion;
+		if (eleccion == s) {
+
+		}
+	}
 	std::cout << "como se llama el archivo de texto" << std::endl;
 	std::string name;
 	std::cin >> name;
@@ -258,6 +266,7 @@ else if (eleccion == "2") {
 		depthFirstSearch(x, nod, m_nodos[0], buffer, abiertos, cerrados);
 		abiertos.clear();
 		cerrados.clear();
+		graphMenu();
 	}
 }
 else if (eleccion == "3") {
@@ -279,6 +288,7 @@ else if (eleccion == "3") {
 		breadthFirstSearch(x, nod, m_nodos[0], buffer, abiertos, cerrados);
 		abiertos.clear();
 		cerrados.clear();
+		graphMenu();
 	}
 }
 else {
