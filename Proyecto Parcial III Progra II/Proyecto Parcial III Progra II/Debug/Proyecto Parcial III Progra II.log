@@ -1,0 +1,18 @@
+﻿  cPathFinding.cpp
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(3): warning C4305: 'inicializando': truncamiento de 'double' a 'const float'
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(69): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(89): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(112): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(137): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(146): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(181): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(190): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(225): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(269): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(317): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(336): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(416): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(432): warning C4018: '<': no coinciden signed/unsigned
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(311): warning C4172: devolución de dirección de la variable local o temporal: d
+c:\users\frank\onedrive\escritorio\proyecto parcial iii progra ii\proyecto parcial iii progra ii\cpathfinding.cpp(411): warning C4172: devolución de dirección de la variable local o temporal: d
+  Proyecto Parcial III Progra II.vcxproj -> C:\Users\frank\OneDrive\Escritorio\Proyecto Parcial III Progra II\Debug\Proyecto Parcial III Progra II.exe
